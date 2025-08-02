@@ -314,6 +314,17 @@
 
 <div id="typewriter-text"></div>
 <script src="main.js"></script>
+    <audio id="bg-music" autoplay muted loop>
+  <source src="happybirthday.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  window.addEventListener('click', () => {
+    const audio = document.getElementById('bg-music');
+    audio.muted = false;
+    audio.play();
+  });
+</script>
     
   </body>
 </html>
