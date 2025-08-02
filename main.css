@@ -1321,47 +1321,48 @@ body {
 }
 #typewriter-text {
   position: fixed;
-  top: 30px;
+  top: 20px;
   width: 100%;
   text-align: center;
-  font-size: 1.2em;
-  line-height: 1.5;
-  padding: 20px;
+  font-size: 1em; /* Ukuran teks diperkecil */
+  line-height: 1.4;
+  padding: 10px 20px;
   color: #ffe4f3;
   font-family: 'Georgia', serif;
   white-space: pre-wrap;
-  text-shadow: 0 0 10px #ff69b4;
+  text-shadow: 0 0 8px #ff69b4;
   z-index: 999;
 }
 
 .heart {
   position: fixed;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   background-color: pink;
   transform: rotate(45deg);
   animation: floatUp 6s linear infinite;
-  box-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
-  opacity: 0.7;
+  box-shadow: 0 0 8px rgba(255, 105, 180, 0.6);
+  opacity: 0.8;
   z-index: 0;
+  border-radius: 2px;
 }
 
 .heart::before, .heart::after {
   content: "";
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   background-color: pink;
   border-radius: 50%;
 }
 
 .heart::before {
-  top: -10px;
+  top: -8px;
   left: 0;
 }
 
 .heart::after {
-  left: -10px;
+  left: -8px;
   top: 0;
 }
 
@@ -1375,4 +1376,3 @@ body {
     opacity: 0;
   }
 }
-
