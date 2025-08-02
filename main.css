@@ -1319,3 +1319,60 @@ body {
   -webkit-animation-play-state: paused !important;
           animation-play-state: paused !important;
 }
+#typewriter-text {
+  position: fixed;
+  top: 30px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.5;
+  padding: 20px;
+  color: #ffe4f3;
+  font-family: 'Georgia', serif;
+  white-space: pre-wrap;
+  text-shadow: 0 0 10px #ff69b4;
+  z-index: 999;
+}
+
+.heart {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: pink;
+  transform: rotate(45deg);
+  animation: floatUp 6s linear infinite;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+  opacity: 0.7;
+  z-index: 0;
+}
+
+.heart::before, .heart::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: pink;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  left: -10px;
+  top: 0;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(45deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
