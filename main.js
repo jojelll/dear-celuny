@@ -2,7 +2,7 @@ onload = () => {
   document.body.classList.remove("container");
 
   // Typewriter effect
-  const text = `[Happy Birthday, dear Celuny,  
+  const text = `Happy Birthday, dear Celuny,  
 a beacon in my life's grand sea.  
 You mean so much, truly, profoundly,  
 my precious friend, for all to see.
@@ -18,7 +18,7 @@ May grand adventures find your way,
 each rising sun, a brighter day.
 
 Happy Birthday sweet Celuny,  
-may life’s best gifts now come to thee.]`;
+may life’s best gifts now come to thee.`;
 
   let i = 0;
   const speed = 50; // milidetik per karakter
