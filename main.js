@@ -1,4 +1,5 @@
-onload = () => {
+<DOCUMENT filename="main.js">
+window.onload = () => {
   document.body.classList.remove("container");
 
   // Typewriter effect
@@ -35,6 +36,37 @@ may life’s best gifts now come to thee.`;
 
   // Random heart effect
   function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.style.left = Math.random() * 100 + "vw";
+    const size = Math.random() * 10 + 15; // Adjusted size range for better visibility
+    heart.style.width = `${size}px`;
+    heart.style.height = `${size}px`;
+    heart.style.setProperty('--before-width', `${size}px`);
+    heart.style.setProperty('--before-height', `${size}px`);
+    heart.style.setProperty('--after-width', `${size}px`);
+    heart.style.setProperty('--after-height', `${size}px`);
+    heart.style.animationDuration = (Math.random() * 4 + 3) + "s";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 7000);
+  }
+
+  setInterval(createHeart, 300);
+
+  // Audio playback
+  const music = document.getElementById("music");
+  music.volume = 0.5;
+
+  // Play audio on user interaction
+  const playAudio = () => {
+    music.play().catch((error) => {
+      console.error("Audio playback failed:", error);
+    });
+    document.removeEventListener("click", playAudio);
+  };
+  document.addEventListener("click", playAudio);
+};
+</DOCUMENT>  function createHeart() {
     const heart = document.createElement("div");
     heart.className = "heart";
     heart.style.left = Math.random() * 100 + "vw";
