@@ -66,6 +66,33 @@ may life’s best gifts now come to thee.`;
     const heart = document.createElement("div");
     heart.className = "heart";
     heart.style.left = Math.random() * 100 + "vw";
+    const size = Math.random() * 10 + 15;
+    heart.style.width = `${size}px`;
+    heart.style.height = `${size}px`;
+    heart.style.animationDuration = (Math.random() * 4 + 3) + "s";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 7000);
+  }
+
+  setInterval(createHeart, 300);
+
+  // Audio playback
+  const music = document.getElementById("music");
+  music.volume = 0.5;
+
+  const playAudio = () => {
+    music.play().catch((error) => {
+      console.error("Audio playback failed:", error);
+    });
+    document.removeEventListener("click", playAudio);
+  };
+  document.addEventListener("click", playAudio);
+};
+</DOCUMENT>  // Random heart effect
+  function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.style.left = Math.random() * 100 + "vw";
     const size = Math.random() * 10 + 15; // Adjusted size range for better visibility
     heart.style.width = `${size}px`;
     heart.style.height = `${size}px`;
